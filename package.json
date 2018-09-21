@@ -2,13 +2,8 @@
   "name": "serverless-plugin-typescript",
   "version": "0.0.0-semantic-release",
   "main": "dist/src/index.js",
-  "files": [
-    "dist",
-    "package.json",
-    "README.md"
-  ],
   "scripts": {
-    "prepublish": "npm run build",
+    "postinstall": "npm run build",
     "precommit": "npm run test",
     "build": "rm -rf dist && tsc",
     "pretest": "npm run lint",
